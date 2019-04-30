@@ -1,0 +1,1 @@
+Input directory for Prototype Image Loader Sample Images
