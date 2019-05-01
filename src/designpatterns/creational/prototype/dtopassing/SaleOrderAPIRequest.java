@@ -60,8 +60,13 @@ public class SaleOrderAPIRequest implements Prototype<SaleOrderAPIRequest> {
 	}
 
 	@Override
-	protected SaleOrderAPIRequest clone() throws CloneNotSupportedException {
+	public SaleOrderAPIRequest clone() throws CloneNotSupportedException {
 		return SaleOrderAPIRequest.class.cast(super.clone());
+	}
+
+	@Override
+	public SaleOrderAPIRequest cloneAsDeepCopy() throws Exception {
+		return CloneUtility.deepCopy(this);
 	}
 
 }

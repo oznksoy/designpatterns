@@ -14,6 +14,7 @@ public class SaleOrderAPIResource implements SaleOrderAPI {
 
 	@Override
 	public SaleOrderAPIResponse placeSaleOrder(SaleOrderAPIRequest apiRequest) {
+
 		try {
 			SaleOrderAPIRequest requestCloneForValidation = apiRequest.clone();
 			SaleOrderAPIRequest requestCloneForAddressFeed = apiRequest.clone();
@@ -23,7 +24,11 @@ public class SaleOrderAPIResource implements SaleOrderAPI {
 			addressOperator.consumeRequest(requestCloneForAddressFeed);
 			paymentOperator.consumeRequest(requestCloneForPaymentOperation);
 
-		} catch (CloneNotSupportedException e) {
+			SaleOrderAPIRequest requestDeepCloneForValidation = apiRequest.cloneAsDeepCopy();
+			SaleOrderAPIRequest requestDeepCloneForAddressFeed = apiRequest.cloneAsDeepCopy();
+			SaleOrderAPIRequest requestDeepCloneForPaymentOperation = apiRequest.cloneAsDeepCopy();
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 

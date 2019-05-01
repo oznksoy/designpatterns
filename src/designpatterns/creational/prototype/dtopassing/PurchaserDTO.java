@@ -1,6 +1,8 @@
 package designpatterns.creational.prototype.dtopassing;
 
-public class PurchaserDTO {
+import java.io.Serializable;
+
+public class PurchaserDTO implements Serializable{
 
 	private String name;
 	private String surname;

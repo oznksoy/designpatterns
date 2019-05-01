@@ -1,6 +1,8 @@
 package designpatterns.creational.prototype.dtopassing;
 
-public class ItemDTO {
+import java.io.Serializable;
+
+public class ItemDTO implements Serializable {
 
 	private String itemDescription;
 	private String itemCode;
