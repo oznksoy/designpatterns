@@ -77,4 +77,4 @@ class SaleOrderAPIRequest implements Prototype<SaleOrderAPIRequest> {
 		return CloneUtility.deepCopy(this);
 	}
 
-}
+}// End of Class

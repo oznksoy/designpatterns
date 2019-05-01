@@ -40,4 +40,4 @@ class SaleOrderConfigurerImpl implements SaleOrderConfigurer {
 		return this.paymentOperator;
 	}
 
-}
+}// End of Class

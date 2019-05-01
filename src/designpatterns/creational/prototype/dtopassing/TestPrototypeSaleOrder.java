@@ -13,13 +13,22 @@ import java.util.UUID;
  * @author Ozan Aksoy
  *
  */
-class TestPrototypeSaleOrder {
+public class TestPrototypeSaleOrder {
 
 	public static void main(String[] args) {
-		testCaseBadmintonSet();
-	}// End of Main
 
-	private static void testCaseBadmintonSet() {
+		TestPrototypeSaleOrder testPrototypeSaleOrder = new TestPrototypeSaleOrder();
+		testPrototypeSaleOrder.testAll();
+
+	}// End of Method
+
+	public void testAll() {
+
+		testCaseBadmintonSet();
+
+	}// End of Method
+
+	private void testCaseBadmintonSet() {
 
 		SaleOrderConfigurer configurer = generateConfigurerForBadminton();
 		SaleOrderAPI saleAPI = new SaleOrderAPIResource(configurer);
@@ -46,7 +55,7 @@ class TestPrototypeSaleOrder {
 
 	}// End of Method
 
-	private static void printForTestCaseBadmintonSet(SaleOrderAPIRequest request, SaleOrderAPIResponse response) {
+	private void printForTestCaseBadmintonSet(SaleOrderAPIRequest request, SaleOrderAPIResponse response) {
 
 		StringBuilder strBuilder = new StringBuilder();
 		strBuilder.append("Initial Input By Reference :" + "\n");
@@ -103,9 +112,10 @@ class TestPrototypeSaleOrder {
 		strBuilder.append("\n");
 
 		System.out.print(strBuilder.toString());
-	}
 
-	private static SaleOrderConfigurer generateConfigurerForBadminton() {
+	}// End of Method
+
+	private SaleOrderConfigurer generateConfigurerForBadminton() {
 		Validator validator = new Validator() {
 
 			@Override
@@ -136,9 +146,10 @@ class TestPrototypeSaleOrder {
 		};
 
 		return new SaleOrderConfigurerImpl(validator, addressOperator, paymentOperator);
-	}
 
-	private static SaleOrderAPIRequest createRequestBadmintonSet() {
+	}// End of Method
+
+	private SaleOrderAPIRequest createRequestBadmintonSet() {
 
 		SaleOrderAPIRequest orderRequest = new SaleOrderAPIRequest();
 
@@ -198,6 +209,6 @@ class TestPrototypeSaleOrder {
 
 		return orderRequest;
 
-	}
+	}// End of Method
 
 }// End of Class

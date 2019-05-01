@@ -12,4 +12,4 @@ interface PaymentOperator {
 
 	public void consumeRequest(SaleOrderAPIRequest apiRequest);
 
-}
+}// End of Interface

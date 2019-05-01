@@ -16,6 +16,6 @@ interface SaleOrderAPI {
 	public SaleOrderAPIResponse placeSaleOrderWithShallowCopy(SaleOrderAPIRequest apiRequest)
 			throws CloneNotSupportedException;
 
-	SaleOrderAPIResponse placeSaleOrderWithDeepCopy(SaleOrderAPIRequest apiRequest) throws Exception;
+	public SaleOrderAPIResponse placeSaleOrderWithDeepCopy(SaleOrderAPIRequest apiRequest) throws Exception;
 
-}
+}// End of InterfaceF

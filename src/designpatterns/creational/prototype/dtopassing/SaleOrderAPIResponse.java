@@ -40,4 +40,4 @@ class SaleOrderAPIResponse {
 		this.copyForPayment = copyForPayment;
 	}
 
-}
+}// End of Class

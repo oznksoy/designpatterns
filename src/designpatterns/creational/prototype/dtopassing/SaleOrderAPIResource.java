@@ -66,4 +66,4 @@ class SaleOrderAPIResource implements SaleOrderAPI {
 
 	}
 
-}
+}// End of Class

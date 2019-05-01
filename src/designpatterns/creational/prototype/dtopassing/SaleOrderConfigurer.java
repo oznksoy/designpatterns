@@ -17,4 +17,4 @@ interface SaleOrderConfigurer {
 
 	public PaymentOperator getPaymentOperator();
 
-}
+}// End of Interface

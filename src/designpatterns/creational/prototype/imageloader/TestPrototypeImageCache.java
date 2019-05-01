@@ -13,6 +13,11 @@ import designpatterns.creational.prototype.imageloader.ImageCache.AvailableImage
  */
 public class TestPrototypeImageCache {
 
+	public static void main(String[] args) {
+		TestPrototypeImageCache testPrototypeImageCache = new TestPrototypeImageCache();
+		testPrototypeImageCache.testAll();
+	}
+
 	public void testAll() {
 		testCaseCity();
 		testCaseForest();

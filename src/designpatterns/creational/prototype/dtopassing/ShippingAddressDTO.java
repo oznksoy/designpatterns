@@ -11,4 +11,4 @@ package designpatterns.creational.prototype.dtopassing;
 @SuppressWarnings("serial")
 class ShippingAddressDTO extends AddressDTO {
 
-}
+}// End of Class

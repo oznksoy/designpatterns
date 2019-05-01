@@ -20,4 +20,4 @@ interface AddressOperator {
 	 */
 	public void consumeRequest(SaleOrderAPIRequest apiRequest);
 
-}
+}// End of Interface

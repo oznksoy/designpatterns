@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @author Ozan Aksoy
  *
  */
-class PurchaserDTO implements Serializable{
+class PurchaserDTO implements Serializable {
 
 	private String name;
 	private String surname;
@@ -58,4 +58,4 @@ class PurchaserDTO implements Serializable{
 		this.gsmNumber = gsmNumber;
 	}
 
-}
+}// End of Class

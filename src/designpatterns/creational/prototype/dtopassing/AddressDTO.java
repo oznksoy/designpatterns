@@ -67,4 +67,4 @@ abstract class AddressDTO implements Serializable {
 		this.phoneNumber = phoneNumber;
 	}
 
-}
+}// End of Class
