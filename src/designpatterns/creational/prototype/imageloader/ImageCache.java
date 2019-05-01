@@ -40,4 +40,4 @@ class ImageCache {
 		return map.get(image).clone();
 	}// End of Method
 
-}
+}// End of Class
