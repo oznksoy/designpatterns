@@ -2,7 +2,15 @@ package designpatterns.creational.prototype.dtopassing;
 
 import java.io.Serializable;
 
-abstract class AddressDTO implements Serializable{
+/**
+ * <p>
+ * Mock address DTO class for Prototype Design Pattern Example
+ * </p>
+ * 
+ * @author Ozan Aksoy
+ *
+ */
+abstract class AddressDTO implements Serializable {
 
 	private String fullname;
 	private String address;

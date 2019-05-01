@@ -6,11 +6,19 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
+/**
+ * <p>
+ * Deep Copy utility via Serialized Objects
+ * </p>
+ * 
+ * @author Ozan Aksoy
+ *
+ */
 class CloneUtility {
 
 	/**
 	 * <p>
-	 * Copy by Value Object must be serializable and must have a Unique ID key
+	 * Copy by Value Object must be serializable
 	 * </p>
 	 * 
 	 * @author Ozan Aksoy

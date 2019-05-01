@@ -1,5 +1,13 @@
 package designpatterns.creational.prototype.dtopassing;
 
+/**
+ * <p>
+ * Mock DTO object for Prototype Example
+ * </p>
+ * 
+ * @author Ozan Aksoy
+ *
+ */
 class InvoiceAddressDTO extends AddressDTO {
 
 	private boolean isCorporation;

@@ -2,6 +2,14 @@ package designpatterns.creational.prototype.dtopassing;
 
 import java.io.Serializable;
 
+/**
+ * <p>
+ * Mock DTO object of Prototype Example
+ * </p>
+ * 
+ * @author Ozan Aksoy
+ *
+ */
 class ItemDTO implements Serializable {
 
 	private String itemDescription;

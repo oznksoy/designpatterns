@@ -2,6 +2,14 @@ package designpatterns.creational.prototype.dtopassing;
 
 import java.util.List;
 
+/**
+ * <p>
+ * Main Stub Request DTO to show Prototype Design.
+ * </p>
+ * 
+ * @author Ozan Aksoy
+ *
+ */
 class SaleOrderAPIRequest implements Prototype<SaleOrderAPIRequest> {
 
 	private String orderId;

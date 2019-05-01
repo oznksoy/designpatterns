@@ -1,5 +1,13 @@
 package designpatterns.creational.prototype.dtopassing;
 
+/**
+ * <p>
+ * Fake API entry controller to showcase Prototype Design Pattern.
+ * </p>
+ * 
+ * @author Ozan Aksoy
+ *
+ */
 class SaleOrderAPIResource implements SaleOrderAPI {
 
 	private Validator validator;

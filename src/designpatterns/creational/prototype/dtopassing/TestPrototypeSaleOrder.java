@@ -4,7 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-class TestPrototypeSaleOrderRequest {
+/**
+ * <p>
+ * Class includes a test cases to showcase how different types of cloning types
+ * for Prototype Design Pattern can change the usage of the pattern.
+ * </p>
+ * 
+ * @author Ozan Aksoy
+ *
+ */
+class TestPrototypeSaleOrder {
 
 	public static void main(String[] args) {
 		testCaseBadmintonSet();

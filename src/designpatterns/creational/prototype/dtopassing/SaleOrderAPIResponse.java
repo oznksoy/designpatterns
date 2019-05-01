@@ -1,5 +1,15 @@
 package designpatterns.creational.prototype.dtopassing;
 
+/**
+ * <p>
+ * Designed to satisfy request-response pair nature of fake API showcase. Not
+ * realistic on implementation, but it is used in carrying altered versions of
+ * cloned request DTOs
+ * </p>
+ * 
+ * @author Ozan Aksoy
+ *
+ */
 class SaleOrderAPIResponse {
 
 	private SaleOrderAPIRequest copyForValidation;
