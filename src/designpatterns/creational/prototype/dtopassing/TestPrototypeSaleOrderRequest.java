@@ -15,18 +15,85 @@ public class TestPrototypeSaleOrderRequest {
 		ISaleOrderConfigurer configurer = generateConfigurerForBadminton();
 		SaleOrderAPI saleAPI = new SaleOrderAPIResource(configurer);
 
-		SaleOrderAPIRequest requestToShallowCopy = createRequestBadmintonSet();
-		SaleOrderAPIResponse responseShallow = saleAPI.placeSaleOrderWithShallowCopy(requestToShallowCopy);
-		printForTestCaseBadmintonSet(requestToShallowCopy, responseShallow);
+		try {
+			SaleOrderAPIRequest requestToShallowCopy = createRequestBadmintonSet();
+			SaleOrderAPIResponse responseShallow;
+			responseShallow = saleAPI.placeSaleOrderWithShallowCopy(requestToShallowCopy);
+			System.out.println("Shallow copy results:");
+			printForTestCaseBadmintonSet(requestToShallowCopy, responseShallow);
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
 
-		SaleOrderAPIRequest requestToDeepCopy = createRequestBadmintonSet();
-		SaleOrderAPIResponse responseDeep = saleAPI.placeSaleOrderWithDeepCopy(requestToDeepCopy);
-		printForTestCaseBadmintonSet(requestToDeepCopy, responseDeep);
+		try {
+			System.out.println("Deep copy results:");
+			SaleOrderAPIRequest requestToDeepCopy = createRequestBadmintonSet();
+			SaleOrderAPIResponse responseDeep;
+			responseDeep = saleAPI.placeSaleOrderWithDeepCopy(requestToDeepCopy);
+			printForTestCaseBadmintonSet(requestToDeepCopy, responseDeep);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}// End of Method
 
 	private static void printForTestCaseBadmintonSet(SaleOrderAPIRequest request, SaleOrderAPIResponse response) {
 
+		StringBuilder strBuilder = new StringBuilder();
+		strBuilder.append("Initial Input By Reference :" + "\n");
+		strBuilder.append("Installment : " + request.getInstallment());
+		strBuilder.append("\n");
+		strBuilder.append("City : " + request.getInvoiceAddress().getCity());
+		strBuilder.append("\n");
+		strBuilder.append("PostalCode : " + request.getInvoiceAddress().getPostalcode());
+		strBuilder.append("\n");
+		strBuilder.append("Item1.Code : " + request.getItems().get(0).getItemCode());
+		strBuilder.append("\n");
+		strBuilder.append("Item1.Description : " + request.getItems().get(0).getItemDescription());
+		strBuilder.append("\n");
+		strBuilder.append("\n");
+
+		strBuilder.append("Validation Process Clone :" + "\n");
+		strBuilder.append("Installment : " + response.getCopyForValidation().getInstallment());
+		strBuilder.append("\n");
+		strBuilder.append("City : " + response.getCopyForValidation().getInvoiceAddress().getCity());
+		strBuilder.append("\n");
+		strBuilder.append("PostalCode : " + response.getCopyForValidation().getInvoiceAddress().getPostalcode());
+		strBuilder.append("\n");
+		strBuilder.append("Item1.Code : " + response.getCopyForValidation().getItems().get(0).getItemCode());
+		strBuilder.append("\n");
+		strBuilder.append(
+				"Item1.Description : " + response.getCopyForValidation().getItems().get(0).getItemDescription());
+		strBuilder.append("\n");
+		strBuilder.append("\n");
+
+		strBuilder.append("Address Feed Clone :" + "\n");
+		strBuilder.append("Installment : " + response.getCopyForAddress().getInstallment());
+		strBuilder.append("\n");
+		strBuilder.append("City : " + response.getCopyForAddress().getInvoiceAddress().getCity());
+		strBuilder.append("\n");
+		strBuilder.append("PostalCode : " + response.getCopyForAddress().getInvoiceAddress().getPostalcode());
+		strBuilder.append("\n");
+		strBuilder.append("Item1.Code : " + response.getCopyForAddress().getItems().get(0).getItemCode());
+		strBuilder.append("\n");
+		strBuilder.append("Item1.Description : " + response.getCopyForAddress().getItems().get(0).getItemDescription());
+		strBuilder.append("\n");
+		strBuilder.append("\n");
+
+		strBuilder.append("Payment Process Clone :" + "\n");
+		strBuilder.append("Installment : " + response.getCopyForPayment().getInstallment());
+		strBuilder.append("\n");
+		strBuilder.append("City : " + response.getCopyForPayment().getInvoiceAddress().getCity());
+		strBuilder.append("\n");
+		strBuilder.append("PostalCode : " + response.getCopyForPayment().getInvoiceAddress().getPostalcode());
+		strBuilder.append("\n");
+		strBuilder.append("Item1.Code : " + response.getCopyForPayment().getItems().get(0).getItemCode());
+		strBuilder.append("\n");
+		strBuilder.append("Item1.Description : " + response.getCopyForPayment().getItems().get(0).getItemDescription());
+		strBuilder.append("\n");
+		strBuilder.append("\n");
+
+		System.out.print(strBuilder.toString());
 	}
 
 	private static ISaleOrderConfigurer generateConfigurerForBadminton() {

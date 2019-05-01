@@ -13,47 +13,49 @@ public class SaleOrderAPIResource implements SaleOrderAPI {
 	}
 
 	@Override
-	public SaleOrderAPIResponse placeSaleOrderWithShallowCopy(SaleOrderAPIRequest apiRequest) {
-
-		try {
-
-			SaleOrderAPIRequest shallowCopyForValidation = apiRequest.clone();
-			SaleOrderAPIRequest shallowCopyForAddress = apiRequest.clone();
-			SaleOrderAPIRequest shallowCopyForPayment = apiRequest.clone();
-
-			validator.consumeRequest(shallowCopyForValidation);
-			addressOperator.consumeRequest(shallowCopyForAddress);
-			paymentOperator.consumeRequest(shallowCopyForPayment);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public SaleOrderAPIResponse placeSaleOrderWithShallowCopy(SaleOrderAPIRequest apiRequest)
+			throws CloneNotSupportedException {
 
 		SaleOrderAPIResponse response = null;
 
+		SaleOrderAPIRequest shallowCopyForValidation;
+		shallowCopyForValidation = apiRequest.clone();
+		SaleOrderAPIRequest shallowCopyForAddress = apiRequest.clone();
+		SaleOrderAPIRequest shallowCopyForPayment = apiRequest.clone();
+
+		validator.consumeRequest(shallowCopyForValidation);
+		addressOperator.consumeRequest(shallowCopyForAddress);
+		paymentOperator.consumeRequest(shallowCopyForPayment);
+
+		response = new SaleOrderAPIResponse();
+		response.setCopyForValidation(shallowCopyForValidation);
+		response.setCopyForAddress(shallowCopyForAddress);
+		response.setCopyForPayment(shallowCopyForPayment);
+
 		return response;
+
 	}
 
 	@Override
-	public SaleOrderAPIResponse placeSaleOrderWithDeepCopy(SaleOrderAPIRequest apiRequest) {
-
-		try {
-
-			SaleOrderAPIRequest deepCopyForValidation = apiRequest.cloneAsDeepCopy();
-			SaleOrderAPIRequest deepCopyForAddress = apiRequest.cloneAsDeepCopy();
-			SaleOrderAPIRequest deepCopyForPayment = apiRequest.cloneAsDeepCopy();
-
-			validator.consumeRequest(deepCopyForValidation);
-			addressOperator.consumeRequest(deepCopyForAddress);
-			paymentOperator.consumeRequest(deepCopyForPayment);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public SaleOrderAPIResponse placeSaleOrderWithDeepCopy(SaleOrderAPIRequest apiRequest) throws Exception {
 
 		SaleOrderAPIResponse response = null;
 
+		SaleOrderAPIRequest deepCopyForValidation = apiRequest.cloneAsDeepCopy();
+		SaleOrderAPIRequest deepCopyForAddress = apiRequest.cloneAsDeepCopy();
+		SaleOrderAPIRequest deepCopyForPayment = apiRequest.cloneAsDeepCopy();
+
+		validator.consumeRequest(deepCopyForValidation);
+		addressOperator.consumeRequest(deepCopyForAddress);
+		paymentOperator.consumeRequest(deepCopyForPayment);
+
+		response = new SaleOrderAPIResponse();
+		response.setCopyForValidation(deepCopyForValidation);
+		response.setCopyForAddress(deepCopyForAddress);
+		response.setCopyForPayment(deepCopyForPayment);
+
 		return response;
+
 	}
 
 }

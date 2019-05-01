@@ -2,60 +2,32 @@ package designpatterns.creational.prototype.dtopassing;
 
 public class SaleOrderAPIResponse {
 
-	private SaleOrderAPIRequest shallowCopyForValidation;
-	private SaleOrderAPIRequest shallowCopyForAddress;
-	private SaleOrderAPIRequest shallowCopyForPayment;
+	private SaleOrderAPIRequest copyForValidation;
+	private SaleOrderAPIRequest copyForAddress;
+	private SaleOrderAPIRequest copyForPayment;
 
-	private SaleOrderAPIRequest deepCopyForValidation;
-	private SaleOrderAPIRequest deepCopyForAddress;
-	private SaleOrderAPIRequest deepCopyForPayment;
-
-	public SaleOrderAPIRequest getShallowCopyForValidation() {
-		return shallowCopyForValidation;
+	public SaleOrderAPIRequest getCopyForValidation() {
+		return copyForValidation;
 	}
 
-	public void setShallowCopyForValidation(SaleOrderAPIRequest shallowCopyForValidation) {
-		this.shallowCopyForValidation = shallowCopyForValidation;
+	public void setCopyForValidation(SaleOrderAPIRequest copyForValidation) {
+		this.copyForValidation = copyForValidation;
 	}
 
-	public SaleOrderAPIRequest getShallowCopyForAddress() {
-		return shallowCopyForAddress;
+	public SaleOrderAPIRequest getCopyForAddress() {
+		return copyForAddress;
 	}
 
-	public void setShallowCopyForAddress(SaleOrderAPIRequest shallowCopyForAddress) {
-		this.shallowCopyForAddress = shallowCopyForAddress;
+	public void setCopyForAddress(SaleOrderAPIRequest copyForAddress) {
+		this.copyForAddress = copyForAddress;
 	}
 
-	public SaleOrderAPIRequest getShallowCopyForPayment() {
-		return shallowCopyForPayment;
+	public SaleOrderAPIRequest getCopyForPayment() {
+		return copyForPayment;
 	}
 
-	public void setShallowCopyForPayment(SaleOrderAPIRequest shallowCopyForPayment) {
-		this.shallowCopyForPayment = shallowCopyForPayment;
-	}
-
-	public SaleOrderAPIRequest getDeepCopyForValidation() {
-		return deepCopyForValidation;
-	}
-
-	public void setDeepCopyForValidation(SaleOrderAPIRequest deepCopyForValidation) {
-		this.deepCopyForValidation = deepCopyForValidation;
-	}
-
-	public SaleOrderAPIRequest getDeepCopyForAddress() {
-		return deepCopyForAddress;
-	}
-
-	public void setDeepCopyForAddress(SaleOrderAPIRequest deepCopyForAddress) {
-		this.deepCopyForAddress = deepCopyForAddress;
-	}
-
-	public SaleOrderAPIRequest getDeepCopyForPayment() {
-		return deepCopyForPayment;
-	}
-
-	public void setDeepCopyForPayment(SaleOrderAPIRequest deepCopyForPayment) {
-		this.deepCopyForPayment = deepCopyForPayment;
+	public void setCopyForPayment(SaleOrderAPIRequest copyForPayment) {
+		this.copyForPayment = copyForPayment;
 	}
 
 }
