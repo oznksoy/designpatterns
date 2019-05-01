@@ -10,11 +10,12 @@ class ImageCache {
 	private Map<AvailableImages, ImageLoader> map;
 
 	private ImageCache() {
+		String dir = "resources/designpatterns/creational/prototype/imageloader/inputs/";
 		map = new HashMap<ImageCache.AvailableImages, ImageLoader>();
-		map.put(AvailableImages.CITY, new ImageLoaderImp("resources/prototype/inputs/city.jpg"));
-		map.put(AvailableImages.FOREST, new ImageLoaderImp("resources/prototype/inputs/forest.jpg"));
-		map.put(AvailableImages.WINTER, new ImageLoaderImp("resources/prototype/inputs/winter.jpg"));
-		map.put(AvailableImages.YELLOWSTONE, new ImageLoaderImp("resources/prototype/inputs/yellowstone.jpg"));
+		map.put(AvailableImages.CITY, new ImageLoaderImp(dir + "city.jpg"));
+		map.put(AvailableImages.FOREST, new ImageLoaderImp(dir + "forest.jpg"));
+		map.put(AvailableImages.WINTER, new ImageLoaderImp(dir + "winter.jpg"));
+		map.put(AvailableImages.YELLOWSTONE, new ImageLoaderImp(dir + "yellowstone.jpg"));
 	}
 
 	public static ImageCache getInstance() {
