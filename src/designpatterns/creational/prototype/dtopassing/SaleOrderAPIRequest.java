@@ -2,7 +2,7 @@ package designpatterns.creational.prototype.dtopassing;
 
 import java.util.List;
 
-public class SaleOrderAPIRequest {
+public class SaleOrderAPIRequest implements Prototype<SaleOrderAPIRequest> {
 
 	private String orderId;
 	private Integer installment;
@@ -57,6 +57,11 @@ public class SaleOrderAPIRequest {
 
 	public void setShippingAddress(ShippingAddressDTO shippingAddress) {
 		this.shippingAddress = shippingAddress;
+	}
+
+	@Override
+	protected SaleOrderAPIRequest clone() throws CloneNotSupportedException {
+		return SaleOrderAPIRequest.class.cast(super.clone());
 	}
 
 }
