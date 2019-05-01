@@ -2,7 +2,7 @@ package designpatterns.creational.prototype.dtopassing;
 
 import java.util.List;
 
-public class SaleOrderRequest {
+public class SaleOrderAPIRequest {
 
 	private String orderId;
 	private Integer installment;

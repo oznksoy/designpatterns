@@ -12,7 +12,7 @@ public class TestPrototypeSaleOrderRequest {
 
 	private static void testCaseBadmintonSetKayaOrhan() {
 
-		SaleOrderRequest orderRequest = new SaleOrderRequest();
+		SaleOrderAPIRequest orderRequest = new SaleOrderAPIRequest();
 
 		orderRequest.setInstallment(6);
 		orderRequest.setOrderId(UUID.randomUUID().toString());
@@ -68,7 +68,7 @@ public class TestPrototypeSaleOrderRequest {
 		shippingAddress.setPhoneNumber(invoiceAddress.getPhoneNumber());
 		orderRequest.setShippingAddress(shippingAddress);
 
-		SaleAPI saleAPI = new SaleResource();
+		SaleOrderAPI saleAPI = new SaleOrderAPIResource();
 		saleAPI.placeSaleOrder(orderRequest);
 
 	}// End of Method
