@@ -1,6 +1,6 @@
 package designpatterns.creational.prototype.dtopassing;
 
-public class InvoiceAddressDTO extends AddressDTO {
+class InvoiceAddressDTO extends AddressDTO {
 
 	private boolean isCorporation;
 

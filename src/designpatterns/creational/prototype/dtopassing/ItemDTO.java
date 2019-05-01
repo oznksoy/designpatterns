@@ -2,7 +2,7 @@ package designpatterns.creational.prototype.dtopassing;
 
 import java.io.Serializable;
 
-public class ItemDTO implements Serializable {
+class ItemDTO implements Serializable {
 
 	private String itemDescription;
 	private String itemCode;

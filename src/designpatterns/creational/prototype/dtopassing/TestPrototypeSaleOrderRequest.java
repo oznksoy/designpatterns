@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class TestPrototypeSaleOrderRequest {
+class TestPrototypeSaleOrderRequest {
 
 	public static void main(String[] args) {
 		testCaseBadmintonSet();
@@ -12,7 +12,7 @@ public class TestPrototypeSaleOrderRequest {
 
 	private static void testCaseBadmintonSet() {
 
-		ISaleOrderConfigurer configurer = generateConfigurerForBadminton();
+		SaleOrderConfigurer configurer = generateConfigurerForBadminton();
 		SaleOrderAPI saleAPI = new SaleOrderAPIResource(configurer);
 
 		try {
@@ -96,7 +96,7 @@ public class TestPrototypeSaleOrderRequest {
 		System.out.print(strBuilder.toString());
 	}
 
-	private static ISaleOrderConfigurer generateConfigurerForBadminton() {
+	private static SaleOrderConfigurer generateConfigurerForBadminton() {
 		Validator validator = new Validator() {
 
 			@Override
@@ -126,7 +126,7 @@ public class TestPrototypeSaleOrderRequest {
 
 		};
 
-		return new SaleOrderConfigurer(validator, addressOperator, paymentOperator);
+		return new SaleOrderConfigurerImpl(validator, addressOperator, paymentOperator);
 	}
 
 	private static SaleOrderAPIRequest createRequestBadmintonSet() {

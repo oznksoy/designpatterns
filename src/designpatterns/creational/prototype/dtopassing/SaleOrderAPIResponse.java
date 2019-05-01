@@ -1,6 +1,6 @@
 package designpatterns.creational.prototype.dtopassing;
 
-public class SaleOrderAPIResponse {
+class SaleOrderAPIResponse {
 
 	private SaleOrderAPIRequest copyForValidation;
 	private SaleOrderAPIRequest copyForAddress;

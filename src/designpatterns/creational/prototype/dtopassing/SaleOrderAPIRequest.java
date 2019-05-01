@@ -2,7 +2,7 @@ package designpatterns.creational.prototype.dtopassing;
 
 import java.util.List;
 
-public class SaleOrderAPIRequest implements Prototype<SaleOrderAPIRequest> {
+class SaleOrderAPIRequest implements Prototype<SaleOrderAPIRequest> {
 
 	private String orderId;
 	private Integer installment;

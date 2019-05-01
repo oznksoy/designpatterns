@@ -1,12 +1,12 @@
 package designpatterns.creational.prototype.dtopassing;
 
-public class SaleOrderAPIResource implements SaleOrderAPI {
+class SaleOrderAPIResource implements SaleOrderAPI {
 
 	private Validator validator;
 	private AddressOperator addressOperator;
 	private PaymentOperator paymentOperator;
 
-	public SaleOrderAPIResource(ISaleOrderConfigurer configurer) {
+	public SaleOrderAPIResource(SaleOrderConfigurer configurer) {
 		validator = configurer.getValidator();
 		addressOperator = configurer.getAddressOperator();
 		paymentOperator = configurer.getPaymentOperator();

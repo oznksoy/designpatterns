@@ -1,6 +1,6 @@
 package designpatterns.creational.prototype.dtopassing;
 
-public interface SaleOrderAPI {
+interface SaleOrderAPI {
 
 	public SaleOrderAPIResponse placeSaleOrderWithShallowCopy(SaleOrderAPIRequest apiRequest)
 			throws CloneNotSupportedException;
