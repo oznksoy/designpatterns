@@ -4,6 +4,13 @@ import java.awt.Color;
 
 import designpatterns.creational.prototype.imageloader.ImageCache.AvailableImages;
 
+/**
+ * Test Cases for Prototype Design Pattern with a collaboration with
+ * Factory/Selector design.
+ * 
+ * @author Ozan Aksoy
+ *
+ */
 public class TestPrototypeImageCache {
 
 	public void testAll() {

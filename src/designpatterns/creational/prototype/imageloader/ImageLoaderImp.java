@@ -9,6 +9,14 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**
+ * {@link ImageLoader image loader} items are working with {@link BufferedImage
+ * buffered image} in underlying implementation. This forces a deep copy style
+ * cloning for the non-serializable object {@link BufferedImage buffered image}.
+ * 
+ * @author Ozan Aksoy
+ *
+ */
 class ImageLoaderImp implements ImageLoader {
 
 	private String fileLoc;

@@ -3,6 +3,14 @@ package designpatterns.creational.prototype.imageloader;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Managing Cache Implementation for initial generation of Image Loader Objects
+ * and later on requested images are deep copied from the Image Loader
+ * Implementation.
+ * 
+ * @author Ozan Aksoy
+ *
+ */
 class ImageCache {
 
 	private static ImageCache instance;
