@@ -7,10 +7,62 @@ import java.util.UUID;
 public class TestPrototypeSaleOrderRequest {
 
 	public static void main(String[] args) {
-		testCaseBadmintonSetKayaOrhan();
+		testCaseBadmintonSet();
 	}// End of Main
 
-	private static void testCaseBadmintonSetKayaOrhan() {
+	private static void testCaseBadmintonSet() {
+
+		ISaleOrderConfigurer configurer = generateConfigurerForBadminton();
+		SaleOrderAPI saleAPI = new SaleOrderAPIResource(configurer);
+
+		SaleOrderAPIRequest requestToShallowCopy = createRequestBadmintonSet();
+		SaleOrderAPIResponse responseShallow = saleAPI.placeSaleOrderWithShallowCopy(requestToShallowCopy);
+		printForTestCaseBadmintonSet(requestToShallowCopy, responseShallow);
+
+		SaleOrderAPIRequest requestToDeepCopy = createRequestBadmintonSet();
+		SaleOrderAPIResponse responseDeep = saleAPI.placeSaleOrderWithDeepCopy(requestToDeepCopy);
+		printForTestCaseBadmintonSet(requestToDeepCopy, responseDeep);
+
+	}// End of Method
+
+	private static void printForTestCaseBadmintonSet(SaleOrderAPIRequest request, SaleOrderAPIResponse response) {
+
+	}
+
+	private static ISaleOrderConfigurer generateConfigurerForBadminton() {
+		Validator validator = new Validator() {
+
+			@Override
+			public void consumeRequest(SaleOrderAPIRequest apiRequest) {
+				apiRequest.setInstallment(10);
+			}
+
+		};
+
+		AddressOperator addressOperator = new AddressOperator() {
+
+			@Override
+			public void consumeRequest(SaleOrderAPIRequest apiRequest) {
+				apiRequest.getInvoiceAddress().setCity("Ankara");
+				apiRequest.getInvoiceAddress().setPostalcode("06586");
+			}
+
+		};
+
+		PaymentOperator paymentOperator = new PaymentOperator() {
+
+			@Override
+			public void consumeRequest(SaleOrderAPIRequest apiRequest) {
+				apiRequest.getItems().get(0).setItemCode("1111111");
+				apiRequest.getItems().get(0).setItemDescription("Football");
+			}
+
+		};
+
+		return new SaleOrderConfigurer(validator, addressOperator, paymentOperator);
+	}
+
+	private static SaleOrderAPIRequest createRequestBadmintonSet() {
 
 		SaleOrderAPIRequest orderRequest = new SaleOrderAPIRequest();
 
@@ -68,9 +120,8 @@ public class TestPrototypeSaleOrderRequest {
 		shippingAddress.setPhoneNumber(invoiceAddress.getPhoneNumber());
 		orderRequest.setShippingAddress(shippingAddress);
 
-		SaleOrderAPI saleAPI = new SaleOrderAPIResource();
-		saleAPI.placeSaleOrder(orderRequest);
+		return orderRequest;
 
-	}// End of Method
+	}
 
 }// End of Class
