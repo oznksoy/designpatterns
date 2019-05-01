@@ -1,4 +1,4 @@
-package designpatterns.creational.prototype;
+package designpatterns.creational.prototype.imageloader;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,10 +7,10 @@ class ImageCache {
 
 	private static ImageCache instance;
 
-	private Map<AvailableImages, ImageLoaderImp> map;
+	private Map<AvailableImages, ImageLoader> map;
 
 	private ImageCache() {
-		map = new HashMap<ImageCache.AvailableImages, ImageLoaderImp>();
+		map = new HashMap<ImageCache.AvailableImages, ImageLoader>();
 		map.put(AvailableImages.CITY, new ImageLoaderImp("resources/prototype/inputs/city.jpg"));
 		map.put(AvailableImages.FOREST, new ImageLoaderImp("resources/prototype/inputs/forest.jpg"));
 		map.put(AvailableImages.WINTER, new ImageLoaderImp("resources/prototype/inputs/winter.jpg"));

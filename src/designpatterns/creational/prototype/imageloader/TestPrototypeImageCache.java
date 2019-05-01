@@ -1,10 +1,10 @@
-package designpatterns.creational.prototype;
+package designpatterns.creational.prototype.imageloader;
 
 import java.awt.Color;
 
-import designpatterns.creational.prototype.ImageCache.AvailableImages;
+import designpatterns.creational.prototype.imageloader.ImageCache.AvailableImages;
 
-class ImageCacheTestRunner {
+public class TestPrototypeImageCache {
 
 	public void testAll() {
 		testCaseCity();

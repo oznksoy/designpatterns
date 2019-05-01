@@ -1,4 +1,4 @@
-package designpatterns.creational.prototype;
+package designpatterns.creational.prototype.imageloader;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
