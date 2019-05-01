@@ -2,7 +2,7 @@ package designpatterns.creational.prototype;
 
 import java.awt.Color;
 
-public interface ImageLoader extends Prototype<ImageLoader> {
+interface ImageLoader extends Prototype<ImageLoader> {
 	
 	public void printIdentity();
 

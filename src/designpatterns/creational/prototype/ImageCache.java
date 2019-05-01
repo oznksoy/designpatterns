@@ -3,7 +3,7 @@ package designpatterns.creational.prototype;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ImageCache {
+class ImageCache {
 
 	private static ImageCache instance;
 

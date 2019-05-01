@@ -9,7 +9,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class ImageLoaderImp implements ImageLoader {
+class ImageLoaderImp implements ImageLoader {
 
 	private String fileLoc;
 	private String outputLoc;

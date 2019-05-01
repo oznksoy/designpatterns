@@ -1,6 +1,6 @@
 package designpatterns.creational.prototype;
 
-public interface Prototype<T> {
+interface Prototype<T> {
 
 	T clone();
 
