@@ -5,4 +5,4 @@
  * @author Ozan Aksoy
  *
  */
-package designpatterns.creational.factory;
+package designpatterns.creational.factory.method;
