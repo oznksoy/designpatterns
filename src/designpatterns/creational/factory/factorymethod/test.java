@@ -1,4 +1,4 @@
-package designpatterns.creational.factory.method;
+package designpatterns.creational.factory.factorymethod;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
