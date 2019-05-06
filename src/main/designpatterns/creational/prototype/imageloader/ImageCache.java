@@ -18,7 +18,7 @@ class ImageCache {
 	private Map<AvailableImages, ImageLoader> map;
 
 	private ImageCache() {
-		String dir = "resources/designpatterns/creational/prototype/imageloader/inputs/";
+		String dir = "src/resources/designpatterns/creational/prototype/imageloader/inputs/";
 		map = new HashMap<ImageCache.AvailableImages, ImageLoader>();
 		map.put(AvailableImages.CITY, new ImageLoaderImp(dir + "city.jpg"));
 		map.put(AvailableImages.FOREST, new ImageLoaderImp(dir + "forest.jpg"));
