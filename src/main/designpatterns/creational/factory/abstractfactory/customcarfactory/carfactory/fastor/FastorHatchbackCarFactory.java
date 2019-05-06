@@ -1,5 +1,5 @@
 package designpatterns.creational.factory.abstractfactory.customcarfactory.carfactory.fastor;
 
-public class FastorSedanHatchbackCarFactory {
+public class FastorHatchbackCarFactory {
 
 }
