@@ -1,5 +1,7 @@
 package designpatterns.creational.factory.abstractfactory.customcarfactory.carfactory;
 
-public class HatchbackCarFactory {
+import designpatterns.creational.factory.abstractfactory.customcarfactory.CarFactory;
+
+public abstract class HatchbackCarFactory implements CarFactory {
 
 }

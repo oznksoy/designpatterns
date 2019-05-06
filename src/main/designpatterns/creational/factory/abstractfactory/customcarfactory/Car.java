@@ -2,8 +2,6 @@ package designpatterns.creational.factory.abstractfactory.customcarfactory;
 
 import java.util.List;
 
-import designpatterns.creational.factory.abstractfactory.customcarfactory.part.Exhaust;
-import designpatterns.creational.factory.abstractfactory.customcarfactory.part.WindShield;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.part.accesory.Accesory;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.part.carlight.CarLightSet;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.part.exterior.Bumper;
@@ -11,6 +9,8 @@ import designpatterns.creational.factory.abstractfactory.customcarfactory.part.e
 import designpatterns.creational.factory.abstractfactory.customcarfactory.part.exterior.Hood;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.part.exterior.SideMirror;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.part.exterior.Trunk;
+import designpatterns.creational.factory.abstractfactory.customcarfactory.part.singleitem.Exhaust;
+import designpatterns.creational.factory.abstractfactory.customcarfactory.part.singleitem.WindShield;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.part.wheel.Rim;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.part.wheel.Tire;
 
