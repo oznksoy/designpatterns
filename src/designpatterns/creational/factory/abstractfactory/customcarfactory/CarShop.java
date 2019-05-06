@@ -1,10 +1,15 @@
 package designpatterns.creational.factory.abstractfactory.customcarfactory;
 
+import java.util.List;
+
+import designpatterns.creational.factory.abstractfactory.customcarfactory.constants.CarModel;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.constants.CarStyles;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.constants.CarTypes;
 
 public interface CarShop {
-	
-	public Car buyANewCar(CarTypes type, CarStyles style);
+
+	public List<CarModel> queryAvailableModels();
+
+	public Car buyANewCar(CarModel model);
 
 }

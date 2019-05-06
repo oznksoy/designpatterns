@@ -1,19 +1,10 @@
 package designpatterns.creational.factory.abstractfactory.customcarfactory;
 
-import designpatterns.creational.factory.abstractfactory.customcarfactory.constants.CarStyles;
-import designpatterns.creational.factory.abstractfactory.customcarfactory.constants.CarTypes;
+public abstract class CarShopImpl implements CarShop {
 
-public class CarShopImpl implements CarShop {
-
-	private CarFactory carFactory;
+	CarFactory carFactory;
 
 	public CarShopImpl(CarFactory carFactory) {
-		this.carFactory = carFactory;
-	}
-
-	@Override
-	public Car buyANewCar(CarTypes type, CarStyles style) {
-		return null;
 	}
 
 }
