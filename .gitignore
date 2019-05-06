@@ -8,3 +8,4 @@ bin/
 tmp/
 *.tmp
 *_actual.txt
+**/outputs/
