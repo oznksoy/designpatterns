@@ -2,10 +2,7 @@ package designpatterns.creational.factory.abstractfactory.customcarfactory;
 
 import java.util.List;
 
-import designpatterns.creational.factory.abstractfactory.customcarfactory.constants.CarStyles;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.part.accesory.Accesory;
-import designpatterns.creational.factory.abstractfactory.customcarfactory.part.accesory.SideSkirt;
-import designpatterns.creational.factory.abstractfactory.customcarfactory.part.accesory.Spoiler;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.part.carlight.CarLightSet;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.part.exterior.Bumper;
 import designpatterns.creational.factory.abstractfactory.customcarfactory.part.exterior.Door;
